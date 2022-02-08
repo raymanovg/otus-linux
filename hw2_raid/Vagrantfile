@@ -3,7 +3,7 @@
 
 MACHINES = {
   :"raid" => {
-    :box_name => "centos/7",
+    :box_name => "raymanovg/centos-7-5",
     :cpus => 2,
     # VM RAM size (Mb)
     :memory => 1024,

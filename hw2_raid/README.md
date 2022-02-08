@@ -6,3 +6,4 @@
 6. Также инфу по raid можно глянуть тут: `cat /proc/mdstat`
 7. Тестирование диска: `sudo hdparm -Tt --direct /dev/sda`
 8. Получение доп информации о диске: `sudo smartctl -a /dev/sda`
+
