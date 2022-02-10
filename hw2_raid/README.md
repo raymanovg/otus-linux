@@ -11,7 +11,7 @@
 
 1. Добавить в Vagrantfile еще дисков.
 2. Собрать raid R0/R5/R10 на выбор.
-3. Прописать собранный raid в конф, чтобы raid собирался при загрузке.
+3. Прописать собранный raid в конфиг, чтобы raid собирался при загрузке.
 4. Сломать/починить raid.
 5. Создать GPT раздел и 5 партиций смонтировать их на диск.
 
@@ -143,7 +143,7 @@ ARRAY /dev/md0 level=raid6 num-devices=5 metadata=1.2 name=raid:0 UUID=78762ac5:
 - А затем создал файл mdadm.conf в /etc/
 
 ```
-[vagrant@raid ~]$ sudo  echo "DEVICE partitions" > /etc/mdadm.conf
+[vagrant@raid ~]$ sudo echo "DEVICE partitions" > /etc/mdadm.conf
  ```
  ```
 [vagrant@raid ~]$ sudo mdadm --detail --scan --verbose | awk '/ARRAY/ {print}' >> /etc/mdadm.conf
@@ -592,6 +592,6 @@ sda               8:0    0    10G  0 disk
 `-sda1            8:1    0     1G  0 part  /boot
 ```
 
-> Монитроване прошло успешно
+> Монитрование прошло успешно
 
 
